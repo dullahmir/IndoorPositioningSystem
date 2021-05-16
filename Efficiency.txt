@@ -1,0 +1,12 @@
+I manually measured the time taken for the dashboard to update where the tracker is located. 
+I found the average time taken to be 3.5 ± 0.5 seconds. 
+The efficiency seemed to be independent of which room the tracker was moved to/from, which would be expected 
+since the tracker location is just based on a comparison between the last received RSSI value from each beacon. 
+
+This is a fairly long delay, especially considering that the rooms share boundaries so an instant change in 
+location/room is a likely and frequent occurrence. 
+The main cause of this delay is the time it takes to scan for all available Bluetooth devices. 
+To circumvent this, some sort of interrupt/break could be implemented wherein once the tag is found as an 
+available device, the search stops and then restarts looking for the tag again. 
+This would then only cause a delay from having to find the specific tag which should be significantly less 
+than what it is currently (although it depends on where in the list the device is found). 
