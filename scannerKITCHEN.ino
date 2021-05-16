@@ -13,8 +13,8 @@ BLEScan* pBLEScan;
 char rssi[10];
 
 // SSID/Password
-const char* ssid = "BELL120";
-const char* password = "boodyloser";
+const char* ssid = "xxxxxxxx";
+const char* password = "xxxxxxxx";
 
 // MQTT Broker IP address
 const char* mqtt_server = "192.168.2.16";
